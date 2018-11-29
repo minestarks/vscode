@@ -62,6 +62,7 @@ class MyCompletionItem extends vscode.CompletionItem {
 
 		if (tsEntry.insertText) {
 			this.insertText = tsEntry.insertText;
+			this.filterText = tsEntry.insertText;
 
 			if (tsEntry.replacementSpan) {
 				this.range = typeConverters.Range.fromTextSpan(tsEntry.replacementSpan);
